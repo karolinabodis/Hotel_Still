@@ -1,31 +1,43 @@
 // Fixed menu background
-window.addEventListener("scroll", function() {
-  if (window.scrollY > 50) {
-    document.querySelector("#navbar").style.opacity = 0.8;
-  } else {
-    document.querySelector("#navbar").style.opacity = 1;
-  }
+const navbar = document.getElementById("navbar");
+
+window.addEventListener("scroll", function () {
+	if (window.scrollY > 50) {
+		navbar.style.opacity = 0.8;
+	} else {
+		navbar.style.opacity = 1;
+	}
 });
 
 // Automatic Slideshow
-var slideIndex = 0;
+const slides = document.querySelectorAll(".slides");
+const dots = document.querySelectorAll(".dot");
+
+let slideIndex = -1;
 showSlides();
 
 function showSlides() {
-  var i;
-  var slides = document.getElementsByClassName("slides");
-  var dots = document.getElementsByClassName("dot");
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  setTimeout(showSlides, 5000); // Change image every 5 seconds
+	// hide all images
+	slides.forEach((slide) => {
+		slide.style.display = "none";
+		slide.classList.remove("fade");
+	});
+
+	dots.forEach((dot) => {
+		dot.classList.remove("active");
+	});
+
+	slideIndex++;
+
+	if (slideIndex > slides.length - 1) {
+		slideIndex = 0;
+	}
+
+	// display the current image
+	slides[slideIndex].style.display = "block";
+	slides[slideIndex].classList.add("fade");
+	dots[slideIndex].classList.add("active");
+
+	// change image every 5 seconds
+	setTimeout(showSlides, 5000);
 }
