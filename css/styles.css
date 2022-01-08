@@ -9,8 +9,7 @@
 
 /* Main Styling */
 /****************/
-body {
-  /* alternative font: 0.625em / 1.5 "Montserrat", sans-serif; */
+body {  
   font-family: "Montserrat", sans-serif;
   color: #333;
   line-height: 1.5;
@@ -79,6 +78,7 @@ p {
   transition: background 0.5s ease-in-out;
   -webkit-transition: background 0.5s ease-in-out;
 }
+
 .btn:hover {
   background: #00dddd;
   cursor: pointer;
@@ -178,7 +178,7 @@ p {
 /* Showcase */
 /************/
 .showcase {
-  background: #333 url("../../images/hotel.jpg") no-repeat center center/cover;
+  background: #333 url("../images/hotel.jpg") no-repeat center center/cover;
   height: 100vh;
   color: #fff;
 }
@@ -204,7 +204,7 @@ p {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 3rem;
-  /* Hex: $dark-accent-color  */
+  
 }
 .specials .i-2x {
   background-size: cover;
@@ -214,14 +214,15 @@ p {
   height: 90px;
 }
 .specials .icon-lake {
-  background-image: url("../../images/svg/lake.svg");
+  background-image: url("../images/svg/lake.svg");
 }
 .specials .icon-food {
-  background-image: url("../../images/svg/nutrition.svg");
+  background-image: url("../images/svg/nutrition.svg");
 }
 .specials .icon-spa {
-  background-image: url("../../images/svg/spa.svg");
+  background-image: url("../images/svg/spa.svg");
 }
+/* Hex: $dark-accent-color  */
 .specials .icon-lake:hover,
 .specials .icon-food:hover,
 .specials .icon-spa:hover {
@@ -234,8 +235,7 @@ p {
 /* Section B: Photo Gallery */
 /****************************/
 #gallery {
-  background-color: #f4f4f4;
-  /* height: 100vh; */
+  background-color: #f4f4f4;  
 }
 #gallery .slideshow-container {
   position: relative;
@@ -301,7 +301,7 @@ p {
 /* Section C: Testimonials */
 /***************************/
 #testimonials {
-  background: url(../../images/nearby_03.jpg) no-repeat center center/cover;
+  background: url(../images/nearby_03.jpg) no-repeat center center/cover;
 }
 #testimonials .testimonial {
   display: flex;
@@ -423,16 +423,16 @@ p {
 }
 
 .icon-location {
-  background-image: url("../../images/svg/pin.svg");
+  background-image: url("../images/svg/pin.svg");
   margin: 0.75rem 0 0;
 }
 
 .icon-letter {
-  background-image: url("../../images/svg/letter.svg");
+  background-image: url("../images/svg/letter.svg");
 }
 
 .icon-phone {
-  background-image: url("../../images/svg/phone.svg");
+  background-image: url("../images/svg/phone.svg");
 }
 
 /* Hex: $light-accent-color */
@@ -443,23 +443,23 @@ p {
 }
 
 .icon-facebook {
-  background-image: url("../../images/svg/facebook.svg");
+  background-image: url("../images/svg/facebook.svg");
 }
 
 .icon-instagram {
-  background-image: url("../../images/svg/instagram.svg");
+  background-image: url("../images/svg/instagram.svg");
 }
 
 .icon-twitter {
-  background-image: url("../../images/svg/twitter.svg");
+  background-image: url("../images/svg/twitter.svg");
 }
 
 .icon-youtube {
-  background-image: url("../../images/svg/youtube.svg");
+  background-image: url("../images/svg/youtube.svg");
 }
 
 .icon-linkedin {
-  background-image: url("../../images/svg/linkedin.svg");
+  background-image: url("../images/svg/linkedin.svg");
 }
 
 /* Hex: $light-color */
@@ -485,14 +485,8 @@ p {
 /**************/
 /* About Us */
 /************/
-#about {
-  /* Meet Our Team  */
-  /******************/
-  /* Hotel Gallery */
-  /*****************/
-}
 #about .parallax {
-  background: url(../../images/photo-1.jpg) fixed no-repeat center top/cover;
+  background: url(../images/photo-1.jpg) fixed no-repeat center top/cover;
   position: relative;
   height: 40vh;
 }
@@ -519,8 +513,11 @@ p {
   text-align: justify;
   margin-left: 1rem;
 }
+
+/* Meet Our Team  */
+/******************/
 #about .parallax-2 {
-  background: url(../../images/photo-2.jpg) fixed no-repeat center center/cover;
+  background: url(../images/photo-2.jpg) fixed no-repeat center center/cover;
   height: 30vh;
   position: relative;
 }
@@ -544,8 +541,6 @@ p {
   text-align: center;
   transition: box-shadow 0.3s ease-in;
   -webkit-transition: box-shadow 0.3s ease-in;
-  /* Hex: $dark-color */
-  /* Hex: $light-accent-color */
 }
 #about .cards .card:hover {
   box-shadow: 0px 4px 8px 1px rgba(0, 0, 0, 0.6);
@@ -559,12 +554,16 @@ p {
 #about .cards .card .title {
   font-size: 0.8rem;
 }
+
+/* Hex: $dark-color */
 #about .cards .card .icon-facebook,
 #about .cards .card .icon-instagram,
 #about .cards .card .icon-twitter,
 #about .cards .card .icon-linkedin {
   filter: invert(13%) sepia(48%) saturate(0%) hue-rotate(280deg) brightness(97%) contrast(83%);
 }
+
+/* Hex: $light-accent-color */
 #about .cards .card .icon-facebook:hover,
 #about .cards .card .icon-instagram:hover,
 #about .cards .card .icon-twitter:hover,
@@ -577,8 +576,11 @@ p {
   width: 100%;
   border-radius: 0;
 }
+
+/* Hotel Gallery */
+/*****************/
 #about .parallax-3 {
-  background: url(../../images/nearby_2.jpg) fixed no-repeat center center/cover;
+  background: url(../images/nearby_2.jpg) fixed no-repeat center center/cover;
   height: 30vh;
   position: relative;
 }
@@ -807,7 +809,7 @@ p {
   /* HOME page */
   /* Showcase */
   .showcase {
-    background: #333 url("../../images/hotel.jpg") no-repeat 40% 10%/cover;
+    background: #333 url("../images/hotel.jpg") no-repeat 40% 10%/cover;
     margin-top: 20px;
   }
   .showcase-container {
@@ -888,10 +890,6 @@ p {
 
   /* ABOUT page */
   /* About Us */
-  #about {
-    /* Meet Our Team */
-    /* Hotel Gallery */
-  }
   #about .parallax {
     height: 55vh;
   }
@@ -907,6 +905,8 @@ p {
   #about .about-info .info img {
     margin-top: 3rem;
   }
+  
+  /* Meet Our Team */
   #about .cards {
     display: flex;
     flex-wrap: wrap;
@@ -920,6 +920,8 @@ p {
   #about .cards .card:last-child {
     flex: 0.5;
   }
+  
+  /* Hotel Gallery */
   #about .gallery-content {
     display: flex;
     flex-wrap: wrap;
@@ -960,5 +962,3 @@ p {
     font-size: 10px;
   }
 }
-
-/*# sourceMappingURL=styles.css.map */
